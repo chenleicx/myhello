@@ -2,6 +2,7 @@
 #CC=arm-hisiv200-linux-gnueabi-g++
 #AR=ar
 
+
 INC_PATH= -I.\
           -I../include\
 
@@ -23,7 +24,8 @@ DEP_FILE=$(SRC_FILE:.cpp=.d)
 DEP:=$(foreach n,$(DEP_FILE),$(OBJ_PATH)/$(n))
 
 $(TARGET):$(SRC)
-	$(CC) -o $(TARGET)  $(SRC_PATH)/common/*.cpp $(SRC_PATH)/*.cpp $(INC_PATH) $(CPPFLAGS) 
+	. /usr/local/oecore-x86_64/environment-setup-armv7a-vfp-neon-oe-linux-gnueabi
+	$(CXX) -o $(TARGET)  $(SRC_PATH)/common/*.cpp $(SRC_PATH)/*.cpp $(INC_PATH) $(CPPFLAGS) 
 	-mv $@ $(TARGET_PATH)
 clean:
 	-rm -f $(OBJ)
