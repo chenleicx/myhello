@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TTS_Example", "TTS_Example.vcproj", "{D604B2A2-CB7C-45CD-921D-959AC2D98069}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|WinCE50 (ARMV4I) = Debug|WinCE50 (ARMV4I)
+		Debug|x64 = Debug|x64
+		Release|Win32 = Release|Win32
+		Release|WinCE50 (ARMV4I) = Release|WinCE50 (ARMV4I)
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D604B2A2-CB7C-45CD-921D-959AC2D98069}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D604B2A2-CB7C-45CD-921D-959AC2D98069}.Debug|Win32.Build.0 = Debug|Win32
+		{D604B2A2-CB7C-45CD-921D-959AC2D98069}.Debug|WinCE50 (ARMV4I).ActiveCfg = Debug|WinCE50 (ARMV4I)
+		{D604B2A2-CB7C-45CD-921D-959AC2D98069}.Debug|WinCE50 (ARMV4I).Build.0 = Debug|WinCE50 (ARMV4I)
+		{D604B2A2-CB7C-45CD-921D-959AC2D98069}.Debug|x64.ActiveCfg = Debug|x64
+		{D604B2A2-CB7C-45CD-921D-959AC2D98069}.Debug|x64.Build.0 = Debug|x64
+		{D604B2A2-CB7C-45CD-921D-959AC2D98069}.Release|Win32.ActiveCfg = Release|Win32
+		{D604B2A2-CB7C-45CD-921D-959AC2D98069}.Release|Win32.Build.0 = Release|Win32
+		{D604B2A2-CB7C-45CD-921D-959AC2D98069}.Release|WinCE50 (ARMV4I).ActiveCfg = Release|WinCE50 (ARMV4I)
+		{D604B2A2-CB7C-45CD-921D-959AC2D98069}.Release|WinCE50 (ARMV4I).Build.0 = Release|WinCE50 (ARMV4I)
+		{D604B2A2-CB7C-45CD-921D-959AC2D98069}.Release|x64.ActiveCfg = Release|x64
+		{D604B2A2-CB7C-45CD-921D-959AC2D98069}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
