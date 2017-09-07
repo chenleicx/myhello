@@ -2,6 +2,7 @@
 #include "common/FileReader.h"
 #include "common/CommonTool.h"
 #include <string>
+#include "common/AccountInfo.h"
 using std::string;
 
 #ifdef __LINUX__
@@ -133,6 +134,21 @@ void TTSSynth(const string &cap_key, const string &txt_file, const string &out_p
 	{
 		synth_config = "tagmode=s3ml_sing";
 	}
+
+    //»ñÈ¡AccountInfoµ¥Àý
+    AccountInfo *account_info = AccountInfo::GetInstance();
+    if (!account_info->tts_speed().empty())
+    {
+        synth_config += ",speed=" + account_info->tts_speed();
+    }
+    if (!account_info->tts_volume().empty())
+    {
+        synth_config += ",volume=" + account_info->tts_volume();
+    }
+    if (!account_info->tts_audio_format().empty())
+    {
+        synth_config += ",audioFormat=" + account_info->tts_audio_format();
+    }
 
     err_code = hci_tts_synth( session_id, (char*)txt_data.buff_, synth_config.c_str(), TtsSynthCallbackFunction, fp );
     fclose(fp);

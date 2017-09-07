@@ -26,6 +26,12 @@ public:
     string cap_key();
     string data_path();
     string test_data_path();
+
+    string tts_volume();
+    string tts_speed();
+    string tts_pitch();
+    string tts_audio_format();
+
 protected:
     bool IsValid();
 private:
@@ -37,6 +43,11 @@ private:
     string cap_key_;        //能力capkey
     string data_path_;      //本地资源路径
     string test_data_path_; //测试资源路径
+
+    string tts_volume_;   //tts音量，范围[0,9.99] 
+    string tts_speed_;    //tts速度，范围[0,9.99] 
+    string tts_pitch_;    //tts基频，范围[0,9.99]
+    string tts_audio_format_; //输出音频格式，范围pcm16k16bit,pcm8k16bit等，有效值见详细描述
 };
 
 #endif //__ACCOUNT_INFO_H__

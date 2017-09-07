@@ -14,3 +14,7 @@ cloudUrl=test.api.hcicloud.com:8888
 
 #应用程序序号
 capKey=tts.local.synth
+
+tts_speed=5
+tts_volume=5
+audioFormat=pcm16k16bit

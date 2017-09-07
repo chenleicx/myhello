@@ -46,6 +46,10 @@ vector<string> split(string str,string pattern)
 #define DEVELOPER_KEY_STR "developerKey"
 #define CLOUD_URL_STR "cloudUrl"
 #define CAP_KEY_STR "capKey"
+#define TTS_SPEED_STR "speed"
+#define TTS_VOLUME_STR "volume"
+#define TTS_PITCH_STR "pitch"
+#define TTS_AUDIO_FORMAT_STR "audioFormat"
 
 AccountInfo *AccountInfo::instance_ = NULL;
 AccountInfo *AccountInfo::GetInstance()
@@ -128,6 +132,22 @@ bool AccountInfo::LoadFromFile(const string &account_info_file)
         if (stricmp(key_value[0].c_str(),CAP_KEY_STR) == 0)
         {
             cap_key_ = key_value[1];
+        }
+        if (stricmp(key_value[0].c_str(), TTS_PITCH_STR) == 0)
+        {
+            tts_pitch_ = key_value[1];
+        }
+        if (stricmp(key_value[0].c_str(), TTS_VOLUME_STR) == 0)
+        {
+            tts_volume_ = key_value[1];
+        }
+        if (stricmp(key_value[0].c_str(), TTS_SPEED_STR) == 0)
+        {
+            tts_speed_ = key_value[1];
+        }
+        if (stricmp(key_value[0].c_str(), TTS_AUDIO_FORMAT_STR) == 0)
+        {
+            tts_audio_format_ = key_value[1];
         }
     }
 
@@ -215,5 +235,25 @@ string AccountInfo::data_path()
 string AccountInfo::test_data_path()
 {
     return test_data_path_;
+}
+
+string AccountInfo::tts_volume()
+{
+    return tts_volume_;
+}
+
+string AccountInfo::tts_speed()
+{
+    return tts_speed_;
+}
+
+string AccountInfo::tts_pitch()
+{
+    return tts_pitch_;
+}
+
+string AccountInfo::tts_audio_format()
+{
+    return tts_audio_format_;
 }
 
