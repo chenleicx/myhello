@@ -95,7 +95,7 @@ int main(int argc,char *argv[])
 
     //ÍË³ö
     printf("Press Enter to Exit");
-    getchar();
+    //getchar();
 
     return 0;
 }
