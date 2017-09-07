@@ -149,6 +149,7 @@ void TTSSynth(const string &cap_key, const string &txt_file, const string &out_p
     {
         synth_config += ",audioFormat=" + account_info->tts_audio_format();
     }
+    printf("%s\n", synth_config.c_str());
 
     err_code = hci_tts_synth( session_id, (char*)txt_data.buff_, synth_config.c_str(), TtsSynthCallbackFunction, fp );
     fclose(fp);

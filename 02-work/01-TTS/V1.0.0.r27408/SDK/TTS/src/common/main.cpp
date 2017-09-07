@@ -94,7 +94,7 @@ int main(int argc,char *argv[])
     printf("hci_release\n");
 
     //ÍË³ö
-    printf("Press Enter to Exit");
+    printf("Press Enter to Exit\n");
     //getchar();
 
     return 0;
